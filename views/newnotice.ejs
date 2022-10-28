@@ -1,0 +1,75 @@
+<%- include('./header-1.ejs'); %>
+<%- include('./menu-newnotice.ejs'); %>
+<%- include('./header-2.ejs'); %>
+<!-- Include Editor style. -->
+<link rel="stylesheet" href="../assets/vendor/css/core.css" class="template-customizer-core-css">
+<link rel="stylesheet" href="../assets/vendor/css/theme-default.css" class="template-customizer-theme-css">
+<link rel="stylesheet" href="../assets/css/demo.css">
+
+<div class="content-wrapper" style="margin-top: 20px ;">
+  <!-- Content -->
+  <div class="container-xxl flex-grow-1 container-p-y">
+  <div class="row">
+  <div class="col-xxl">
+  <div class="card mb-4">
+    <div class="card-header d-flex align-items-center justify-content-between">
+      <h5 class="mb-0" style="color: blue;">Add New Notice</h5>
+    </div>
+    <div class="card-body">
+      <form  method="post" action="/newnotice" enctype="multipart/form-data">
+        <div class="row mb-3">
+          <label class="col-sm-2 col-form-label" for="basic-default-name">Department</label>
+          <div class="col-sm-10">
+            <div class="mt-2 mb-3">
+              <select name="department" id="department" class="form-select" required>
+                <option value="General">General</option>
+                <option value="Placement Office">Placement Office</option>
+                <option value="Examination Branch">Examination Branch</option>
+                <option value="Scholarship Branch">Scholarship Branch</option>
+                <option value="Department Of CSE">Department Of CSE</option>
+                <option value="Department Of ECE">Department Of ECE</option>
+                <option value="Department Of EEE">Department Of EEE</option>
+                <option value="Department Of ME">Department Of ME</option>
+                <option value="Department Of Civil">Department Of Civil</option>
+                <option value="Department Of H&S">Department Of H&S</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <label class="col-sm-2 col-form-label" for="basic-default-name">Title</label>
+          <div class="col-sm-10">
+            <input name="title" type="text" class="form-control" id="basic-default-name" placeholder="Notice Titile" required>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <label class="col-sm-2 col-form-label" for="basic-default-message">Description</label>
+          <div class="col-sm-10">
+            <textarea name="description" class="form-control" placeholder="Description" aria-label="Notice Description" aria-describedby="basic-icon-default-message2" required></textarea>
+          </div>
+        </div>
+        <div class="row justify-content-end">
+          <br>
+        <div class="mb-3">
+          <label class="col-sm-6 col-form-label" for="basic-default-name">Notice With Files - Only Images And PDF</label>
+          <div class="col-sm-10 form-control" >
+            <input class="btn btn-primary" type="file" name="files" accept="application/pdf,image/*" multiple/>
+          </div>
+          </div>
+        </div>
+        <div class="row justify-content-end">
+        <div class="col-sm-10">
+          <button class="btn btn-primary" type="submit" >Send </button>
+        </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</div>
+
+
+<!-- / Content -->
+<%- include('./footer.ejs'); %>

@@ -1,0 +1,41 @@
+<%- include('./header-1.ejs'); %>
+<%- include('./menu-dashboard.ejs'); %>
+<%- include('./header-2.ejs'); %>
+<!-- Content wrapper -->
+<div class="content-wrapper" style="margin-top: 20px ;">
+  <!-- Content -->
+  <div class="container-xxl flex-grow-1 container-p-y">
+    <div class="row">
+      <% if ((noticecount>=0) && (newscount>=0)) { %>
+      <div class="col-lg-12">
+        <div class="row">
+          <h2 href="/dashboard" class="menu-link" style="color:#801212; margin-left: 5px;margin-bottom: 10px;">
+            <i class="menu-icon tf-icons bx bx-home-circle"></i>
+            <div data-i18n="Analytics">Dashboard</div>
+          </h2>
+          <div class="col-lg-4">
+            <div class="card" >
+              <div class="card-body pb-0">
+                <span class="d-block fw-semibold mb-1"  style="font-weight: bold; color: blue;">Notices</span>
+                <h3 class="card-title mb-2"><%= noticecount %></h3>
+                <br>
+              </div>
+              <div class="resize-triggers"><div class="expand-trigger"><div style="width: 183px; height: 181px;"></div></div><div class="contract-trigger"></div></div></div>
+          </div>
+          <div class="col-lg-4 ">
+            <div class="card" >
+              <div class="card-body pb-0">
+                <span class="d-block fw-semibold mb-1" style="font-weight: bold; color: blue;">News</span>
+                <h3 class="card-title mb-1"><%= newscount %></h3>
+                <br>
+              </div>
+              <div class="resize-triggers"><div class="expand-trigger"><div style="width: 183px; height: 181px;"></div></div><div class="contract-trigger"></div></div></div>
+          </div>
+          </div>
+        </div>
+      </div>  
+      <% } %>
+    </div>
+  </div>
+  <!-- / Content -->
+<%- include('./footer.ejs'); %>
